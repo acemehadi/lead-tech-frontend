@@ -1,4 +1,6 @@
 import React from 'react';
+import heroVideo from '../assets/hero-video.mp4';
+import logo from '../assets/real_logo.png';
 
 const Hero = () => {
   return (
@@ -11,7 +13,7 @@ const Hero = () => {
         muted
         playsInline
       >
-        <source src="/assets/hero-video.mp4" type="video/mp4" />
+        <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -21,6 +23,7 @@ const Hero = () => {
       {/* Content */}
       <div className="hero-container">
         <div className="hero-content">
+
           <h4>Welcome to LeadTech</h4>
           <h1>Leading Software Innovation in Bangladesh</h1>
           <p>

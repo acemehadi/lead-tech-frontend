@@ -23,52 +23,44 @@ a:hover {
 }
 
 /* LIGHT MODE */
-
-body.light {
+/* Navbar - Light Mode */
+body.light .navbar {
   background: #ffffff;
   color: #111;
 }
 
-/* DARK MODE */
-
-body.dark {
-  background: #0f172a;
-  color: #ffffff;
-}
-
-/* Navbar */
-
+/* Navbar - Dark Mode */
 body.dark .navbar {
-  background: #020617;
+  background: #020617; /* dark bg */
+  color: #fff; /* white text */
 }
 
-body.light .navbar {
-  background: white;
+/* Navbar links */
+.navbar a {
+  color: inherit; /* inherit from navbar color */
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-/* Cards */
-
-body.dark .card {
-  background: #1e293b;
+body.dark .navbar a:hover {
+  color: #4f46e5; /* highlight on hover in dark mode */
 }
 
-body.light .card {
-  background: #f1f5f9;
+body.light .navbar a:hover {
+  color: #6366f1; /* highlight on hover in light mode */
 }
 
-/* Services Section */
-
-body.dark .services {
-  background: #020617;
-}
-
-body.light .services {
-  background: #ffffff;
+/* Menu icons (FaBars / FaTimes) */
+.menu-icon {
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  background-color: red;
 }
 
 button {

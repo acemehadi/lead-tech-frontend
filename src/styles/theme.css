@@ -1,0 +1,22 @@
+body {
+  background: white;
+  color: black;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #0f172a;
+  color: white;
+}
+
+/* Example card */
+
+.card {
+  background: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+body.dark .card {
+  background: #1e293b;
+}

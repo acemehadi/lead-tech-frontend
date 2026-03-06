@@ -1,37 +1,37 @@
 import React from 'react';
-import { FaCode, FaMobileAlt, FaCloud, FaShieldAlt, FaRobot, FaChartLine } from 'react-icons/fa';
+import { FaCode, FaServer, FaMobileAlt, FaDatabase, FaCogs, FaRocket } from 'react-icons/fa';
 
 const Services = () => {
   const services = [
     {
+      icon: <FaServer />,
+      title: 'Custom REST API Development',
+      description: 'Scalable and secure REST APIs for mobile apps, SaaS platforms, and enterprise systems using Django REST Framework.'
+    },
+    {
       icon: <FaCode />,
       title: 'Custom Software Development',
-      description: 'Tailored software solutions designed to meet your specific business requirements.'
+      description: 'Tailored business software solutions such as ERP, CRM, and management systems built with Django.'
     },
     {
       icon: <FaMobileAlt />,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.'
+      title: 'Mobile App Backend',
+      description: 'Powerful backend APIs designed specifically for Android and iOS mobile applications.'
     },
     {
-      icon: <FaCloud />,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services.'
+      icon: <FaDatabase />,
+      title: 'Business Management Software',
+      description: 'Ready-made systems like Inventory, POS, School Management, and Business CRM software.'
     },
     {
-      icon: <FaShieldAlt />,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.'
+      icon: <FaCogs />,
+      title: 'API Integration',
+      description: 'Integrate payment gateways, third-party services, and automation APIs into your system.'
     },
     {
-      icon: <FaRobot />,
-      title: 'AI & Machine Learning',
-      description: 'Intelligent systems that learn and adapt to your business needs.'
-    },
-    {
-      icon: <FaChartLine />,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation consulting and implementation.'
+      icon: <FaRocket />,
+      title: 'Scalable System Architecture',
+      description: 'Design and build high-performance backend systems ready to scale for thousands of users.'
     }
   ];
 
@@ -40,7 +40,7 @@ const Services = () => {
       <div className="container">
         <div className="section-header">
           <h2>Our Services</h2>
-          <p>Comprehensive software solutions tailored for Bangladeshi businesses</p>
+          <p>Scalable backend and software solutions for modern businesses</p>
         </div>
         <div className="services-grid">
           {services.map((service, index) => (

@@ -1,57 +1,63 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
 
+import mehadi from "../assets/formal_mehadi.png"
+import siam from "../assets/siam3.jpg"
+
 const Team = () => {
+
+    const navigate = useNavigate();
+
     const team = [
         {
-            name: 'Rafiq Ahmed',
+            name: 'Mehadi Hasan',
             position: 'CEO & Founder',
-            bio: '15+ years in software development',
-            image: '👨‍💼'
+            bio: '1+ years in software development',
+            image: mehadi,
+            portfolio: "/portfolio/mehadi"
         },
         {
-            name: 'Fatema Begum',
-            position: 'CTO',
-            bio: 'Former Tech Lead at Google',
-            image: '👩‍💻'
+            name: 'Siam Hossen',
+            position: ' Co-founder & COO',
+            bio: 'Expert on Marketing',
+            image: siam,
+            portfolio: "/portfolio/Siam"
         },
-        {
-            name: 'Shahidul Islam',
-            position: 'Lead Developer',
-            bio: 'Full-stack expert',
-            image: '👨‍💻'
-        },
-        {
-            name: 'Nusrat Jahan',
-            position: 'Project Manager',
-            bio: 'PMP certified',
-            image: '👩‍💼'
-        }
+
     ];
 
     return (
         <section id="team" className="team">
             <div className="container">
+
                 <div className="section-header">
                     <h2>Our Team</h2>
                     <p>Meet the experts behind our success</p>
                 </div>
+
                 <div className="team-grid">
+
                     {team.map((member, index) => (
-                        <div className="team-card" key={index}>
+                        <div className="team-card" key={index} onClick={() => navigate(member.portfolio)}>
+
                             <div className="member-image">
-                                <span>{member.image}</span>
+                                <img src={member.image} alt={member.name} />
                             </div>
+
                             <h3>{member.name}</h3>
                             <p className="position">{member.position}</p>
                             <p className="bio">{member.bio}</p>
+
                             <div className="social-links">
                                 <a href="#"><FaLinkedin /></a>
                                 <a href="#"><FaGithub /></a>
                                 <a href="#"><FaTwitter /></a>
                             </div>
+
                         </div>
                     ))}
+
                 </div>
             </div>
         </section>

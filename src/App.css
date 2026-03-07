@@ -64,9 +64,9 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
@@ -97,7 +97,7 @@ section {
 }
 
 .section-header h2::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -113,7 +113,8 @@ section {
   color: var(--text-color);
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
   padding: 12px 30px;
   font-size: 1rem;
   font-weight: 600;
@@ -131,7 +132,7 @@ section {
 .btn-primary:hover {
   background: var(--secondary-color);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 .btn-secondary {
@@ -144,7 +145,7 @@ section {
   background: var(--primary-color);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(37,99,235,0.3);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
 }
 
 /* Navbar Styles */
@@ -154,7 +155,7 @@ section {
   left: 0;
   right: 0;
   background: var(--white);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -198,7 +199,7 @@ section {
 }
 
 .nav-item a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -270,14 +271,14 @@ section {
 .hero-image .image-placeholder {
   width: 100%;
   height: 400px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 8rem;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Services Section */
@@ -297,12 +298,12 @@ section {
   border-radius: 15px;
   text-align: center;
   transition: var(--transition);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .service-icon {
@@ -350,7 +351,7 @@ section {
   justify-content: center;
   font-size: 8rem;
   color: var(--white);
-  box-shadow: 0 20px 40px rgba(37,99,235,0.2);
+  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.2);
 }
 
 .about-content h2 {
@@ -387,7 +388,7 @@ section {
 
 .stat:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .stat h4 {
@@ -412,7 +413,7 @@ section {
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .portfolio-image {
@@ -435,7 +436,7 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
   color: var(--white);
   padding: 20px;
   transform: translateY(100%);
@@ -467,24 +468,42 @@ section {
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
 
 .team-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .member-image {
   width: 100%;
-  height: 250px;
+  height: 251px;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4rem;
   color: var(--white);
+}
+.member-image {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.team-card:hover .member-image img {
+  transform: scale(1.2);
 }
 
 .team-card h3 {
@@ -516,6 +535,15 @@ section {
   font-size: 1.2rem;
   transition: var(--transition);
 }
+.team-card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
 
 .team-card .social-links a:hover {
   color: var(--primary-color);
@@ -540,13 +568,13 @@ section {
   padding: 20px;
   background: var(--white);
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   transition: var(--transition);
 }
 
 .info-item:hover {
   transform: translateX(10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .info-item svg {
@@ -564,7 +592,7 @@ section {
   background: var(--white);
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -586,7 +614,7 @@ section {
 .form-group textarea:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37,99,235,0.1);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
 /* Footer */
@@ -619,7 +647,7 @@ section {
 }
 
 .footer-section h4::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -664,7 +692,7 @@ section {
   transition: var(--transition);
   width: 35px;
   height: 35px;
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -736,7 +764,7 @@ section {
     padding: 20px 0;
     gap: 0;
     transition: var(--transition);
-    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
   }
 
   .nav-menu.active {

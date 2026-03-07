@@ -1,24 +1,18 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import About from './components/About'
-import Portfolio from './components/Portfolio'
-import Team from './components/Team'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from "./Pages/Home"
+import MehadiPortfolio from "./Pages/MehadiPortfolio"
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Services />
-      <About />
-      <Portfolio />
-      <Team />
-      <Contact />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path='/' element={< Home />} />
+          <Route path='/portfolio/mehadi' element={< MehadiPortfolio />} />
+
+
+        </Routes>
+      </Router>
     </>
   )
 }
